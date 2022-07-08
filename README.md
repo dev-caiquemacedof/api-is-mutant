@@ -54,5 +54,5 @@ POST: http://localhost/mutant
 
 5. Documentação Completa da API hospedada
 ```
-[api-is-mutant.doc](https://documenter.getpostman.com/view/21855450/UzJMqErd)
+https://documenter.getpostman.com/view/21855450/UzJMqErd
 ```
