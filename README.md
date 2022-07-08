@@ -32,7 +32,7 @@ sudo mvn clean package
 sudo docker-compose up 
 ```
 
-3. Testando a API
+4. Testando a API
 
 ```
  GET: http://localhost/stats
@@ -50,4 +50,9 @@ POST: http://localhost/mutant
         "TCACTG"
     ]
 }
+```
+
+5. Documentação Completa da API hospedada
+```
+https://documenter.getpostman.com/view/21855450/UzJMqErd
 ```
