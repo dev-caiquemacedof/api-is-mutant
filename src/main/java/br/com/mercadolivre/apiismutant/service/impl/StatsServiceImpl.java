@@ -21,7 +21,6 @@ import static java.math.BigDecimal.valueOf;
 public class StatsServiceImpl implements StatsService {
 
     private static final Logger logger = LoggerFactory.getLogger(StatsService.class);
-
     private final StatsRepository repository;
 
     @Autowired
@@ -57,6 +56,4 @@ public class StatsServiceImpl implements StatsService {
 
         return ratioMutant.divide(PERCENT);
     }
-
-
 }

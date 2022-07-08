@@ -1,7 +1,7 @@
 package br.com.mercadolivre.apiismutant.domain;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
@@ -13,6 +13,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
 public class Stats {
 
     @Id @GeneratedValue(strategy= GenerationType.IDENTITY)

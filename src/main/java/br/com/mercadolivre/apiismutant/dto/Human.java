@@ -1,8 +1,11 @@
 package br.com.mercadolivre.apiismutant.dto;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Human {
     private String[] dna;
 }

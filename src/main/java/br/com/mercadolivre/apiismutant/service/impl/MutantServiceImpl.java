@@ -19,17 +19,17 @@ import java.util.stream.Stream;
 
 @Service
 public class MutantServiceImpl implements MutantService {
-
     private static final Logger logger = LoggerFactory.getLogger(MutantServiceImpl.class);
+    private final StatsService statsService;
 
     @Autowired
-    private StatsService statsService;
+    public MutantServiceImpl(StatsService statsService) {
+        this.statsService = statsService;
+    }
 
     @Override
     public boolean isMutant(String[] dna) throws MutantException {
-
         try {
-
             logger.info("Stating analyze mutant...'");
 
             List<String> dnaGenes = Arrays.asList(dna);
@@ -50,7 +50,6 @@ public class MutantServiceImpl implements MutantService {
     }
 
     private boolean isMutant(Long occurrences) {
-
         if (occurrences > Util.baseNumberSequenceGene) {
             logger.info("Mutant DNA found!");
             statsService.save(new Stats(Origin.MUTANT));
@@ -72,7 +71,6 @@ public class MutantServiceImpl implements MutantService {
     }
 
     private List<String> collectItemsInVertical(List<String> dnaGenes) {
-
         logger.info("collect items in vertical...");
 
         Map<Long, String> horizontalMap = new HashMap<>();
